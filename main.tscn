@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv5iwkfegh46a"]
+
+[ext_resource type="Theme" uid="uid://slffqdr0n0xj" path="res://new_theme.tres" id="1_0v2nc"]
+[ext_resource type="PackedScene" uid="uid://babotl6eawa3g" path="res://UI/ratings_list.tscn" id="2_7nf2u"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0v2nc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="RatingsList" parent="HBoxContainer" instance=ExtResource("2_7nf2u")]
+layout_mode = 2

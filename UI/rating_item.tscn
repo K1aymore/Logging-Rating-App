@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://drw52ekxj6lgn"]
+
+[ext_resource type="Theme" uid="uid://slffqdr0n0xj" path="res://new_theme.tres" id="1_od72q"]
+[ext_resource type="Texture2D" uid="uid://dinvuop6bpkhu" path="res://Arcane poster.jpg" id="2_nl7hs"]
+
+[node name="RatingItem" type="PanelContainer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -72.0
+offset_right = 427.0
+offset_bottom = 72.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_od72q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_od72q")
+
+[node name="Thumbnail" type="TextureRect" parent="MarginContainer/HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_nl7hs")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="MarginContainer/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Arcane Ep.1"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBox"]
+layout_mode = 2
+
+[node name="Rating" type="Label" parent="MarginContainer/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "9.0"
+
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBox"]
+layout_mode = 2

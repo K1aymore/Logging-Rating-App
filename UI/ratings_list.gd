@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_resized() -> void:
-	%List.columns = floori(size.x / 100)
+	%List.columns = floori(size.x / 140)

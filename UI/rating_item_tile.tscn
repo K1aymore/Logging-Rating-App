@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://drqrx83x1q4bm"]
+[gd_scene load_steps=4 format=3 uid="uid://drqrx83x1q4bm"]
 
 [ext_resource type="Texture2D" uid="uid://dinvuop6bpkhu" path="res://Arcane poster.jpg" id="1_axdqk"]
 [ext_resource type="Theme" uid="uid://slffqdr0n0xj" path="res://new_theme.tres" id="1_dbl1c"]
+[ext_resource type="Script" path="res://UI/rating_item_tile.gd" id="2_ksq7f"]
 
 [node name="RatingItemTile" type="PanelContainer"]
 anchors_preset = 8
@@ -18,6 +19,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme = ExtResource("1_dbl1c")
+script = ExtResource("2_ksq7f")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -30,7 +32,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Thumbnail" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("1_axdqk")
@@ -42,7 +44,13 @@ layout_mode = 2
 text = "Ep. 01"
 horizontal_alignment = 1
 
-[node name="Rating" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Rating" type="SpinBox" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "9.0"
-horizontal_alignment = 1
+size_flags_horizontal = 8
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 10.0
+step = 0.5
+value = 9.0
+update_on_text_changed = true
+select_all_on_focus = true

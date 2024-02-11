@@ -7,7 +7,9 @@ static var databaseURL: String
 enum Types {
 	MOVIE,
 	SHOW,
+	SEASON,
 	EPISODE,
+	SAUCE
 }
 
 

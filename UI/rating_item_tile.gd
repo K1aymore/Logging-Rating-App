@@ -1,3 +1,7 @@
 extends PanelContainer
 
-var item : UserItem
+@export var data : UserItem
+
+
+func _ready() -> void:
+	%Rating.value = data.rating

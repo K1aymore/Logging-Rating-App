@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://babotl6eawa3g"]
+[gd_scene load_steps=3 format=3 uid="uid://babotl6eawa3g"]
 
 [ext_resource type="Theme" uid="uid://slffqdr0n0xj" path="res://new_theme.tres" id="1_egcqf"]
 [ext_resource type="Script" path="res://UI/ratings_list.gd" id="1_g41bb"]
-[ext_resource type="PackedScene" uid="uid://drqrx83x1q4bm" path="res://UI/rating_item_tile.tscn" id="2_37mg8"]
 
 [node name="RatingsList" type="ScrollContainer"]
 anchors_preset = 15
@@ -21,56 +20,5 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 columns = 4
-
-[node name="RatingItemTile" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile2" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile3" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile4" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile5" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile6" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile7" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile8" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile9" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile10" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile11" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile12" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile13" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile14" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile15" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile16" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
-
-[node name="RatingItemTile17" parent="List" instance=ExtResource("2_37mg8")]
-layout_mode = 2
 
 [connection signal="resized" from="." to="." method="_on_resized"]

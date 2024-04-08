@@ -1,8 +1,7 @@
-
 class_name Data
 
 static var currentUser: String
-static var databaseURL: String
+static var URL: String = "http://klaymore.me/logs/Database"
 
 enum Types {
 	MOVIE,
@@ -12,6 +11,3 @@ enum Types {
 	SAUCE
 }
 
-
-static func get_data(type : Types):
-	pass

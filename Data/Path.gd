@@ -10,12 +10,24 @@ class_name Path
 
 
 
-func getPath() -> String:
+func getLocalPath() -> String:
 	var basePath := "user://Database" + ("/Users/"+user if user != "" else "")
-	
+	return basePath + "/" + getRestOfPath()
+
+
+func getURL():
+	var basePath := Data.URL + ("/Users/"+user if user != "" else "")
+	return basePath + "/" + getRestOfPath()
+
+
+func getRestOfPath() -> String:
 	if type == Data.Types.SEASON:
-		return "/".join([basePath, Data.Types.keys()[Data.Types.SHOW], str(showID), str(id)+".tres"])
+		return "/".join([Data.Types.keys()[Data.Types.SHOW], str(showID)])
 	if type == Data.Types.EPISODE:
-		return "/".join([basePath, Data.Types.keys()[Data.Types.SHOW], str(showID), str(season), str(id)+".tres"])
+		return "/".join([Data.Types.keys()[Data.Types.SHOW], str(showID), str(season)])
 	
-	return "/".join([basePath, Data.Types.keys()[type], str(id)+".tres"])
+	return Data.Types.keys()[type]
+
+
+func getImagePath():
+	return "/" + Data.Types.keys()[type] + "/" + str(id) + ".jpg"

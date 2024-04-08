@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://babotl6eawa3g" path="res://UI/ratings_list.tscn" id="3_unbqs"]
 
 [node name="Main" type="Control"]
+texture_filter = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

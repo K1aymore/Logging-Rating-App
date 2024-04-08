@@ -5,8 +5,8 @@ var path: Path
 
 func loadImage() -> void:
 	path.user = ""
-	print("user://Database" + path.getImagePath())
-	texture = load("user://Database" + path.getImagePath())
+	var loadedImage = Image.load_from_file("user://Database" + path.getImagePath())
+	texture = ImageTexture.create_from_image(loadedImage)
 	
 	if texture == null:
 		print("Loading image from internet")
